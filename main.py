@@ -3,28 +3,31 @@ import time as t
 from art import *
 import threading, typer, keyboard, colorama
 
-print("-----------------------------------------------------------------------------")
+print(colorama.Fore.CYAN + "-----------------------------------------------------------------------------")
 
-tprint(colorama.Fore.BLUE + "AutoCliker")
+tprint("AutoCliker")
 
-print("-----------------------------------------------------------------------------")
-print("Press Q to stop")
+print("-----------------------------------------------------------------------------" + colorama.Fore.RESET)
+print(colorama.Fore.GREEN + "Press Q to stop" + colorama.Fore.RESET)
 stop = False
 app = typer.Typer()
 
 
-def check(time: float):
+def check(time: float, leftClick: bool):
     global stop
     while (not stop):
-        pg.click()
+        if leftClick:
+            pg.click()
+        else :
+            pg.rightClick()
         t.sleep(time)
 
 
 @app.command()
-def main(time: float):
+def main(time: int, leftClick: bool = True):
     global stop
 
-    th = threading.Thread(target=check, args=(float,))
+    th = threading.Thread(target=check, args=(time, leftClick))
     th.start()
     while True:
         try:
