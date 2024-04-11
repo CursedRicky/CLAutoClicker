@@ -6,7 +6,7 @@ A Command Line Interface auto clicker
 1) Install the requirements from requirements.txt file with the pip command
 
 2) Louch the script with the following line:
-  > python clicker.py TIME
+  > python clicker.py TIME >
   TIME is the time in seconds.
   you can add --no-leftclick to replace left click with right click
 
