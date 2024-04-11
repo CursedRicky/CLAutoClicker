@@ -3,7 +3,8 @@ A Command Line Interface auto clicker
 
 # How to use
 
-1) Install the requirements from requirements.txt file with the pip command
+1) Install the requirements from requirements.txt file with the following command
+  > pip install requirements.txt
 
 2) Louch the script with the following line:
   > python clicker.py TIME
