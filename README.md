@@ -1,7 +1,7 @@
-## CLAutoClicker
+# CLAutoClicker
 A Command Line Interface auto clicker
 
-# How to use
+## How to use
 
 1) Install the requirements from requirements.txt file with the following command
   > pip install requirements.txt
